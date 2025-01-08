@@ -1,7 +1,7 @@
-name: Installing NGINX
-  hosts: web
-  become: yes #sudo -b
-  tasks:
+- name: Installing NGINX
+   hosts: web
+   become: yes #sudo -b
+   tasks:
     -name: install nginx
      ansible.builtin.package:
        name: nginx
