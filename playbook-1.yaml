@@ -1,5 +1,5 @@
 - name: Installing NGINX
-  hosts: 172.31.91.79
+  hosts: web
   become: yes
   tasks:
   - name: install nginx
