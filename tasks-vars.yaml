@@ -1,6 +1,6 @@
 - name: Variables
   hosts: local
-  connection: locals
+  connection: local
   vars:
     COURSE: "DevOps with AWS"
     DURATION: "120 HRS"
