@@ -1,5 +1,5 @@
 - name: Hello playbook
-  hosts: web
+  hosts: local
   become: yes
   tasks:
   - name: Hello World message
