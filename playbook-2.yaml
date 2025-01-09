@@ -1,12 +1,12 @@
-- name: NGINX Server
+- name: install and run nginx
   hosts: web
   become: yes
   tasks:
-  - name: Install NGINX
+  - name: install nginx
     ansible.builtin.package:
       name: nginx
       status: present
-  - name: Enabling NGINX
+  - name: enabling nginx
     ansible.builtin.service:
       name: nginx
       status: started
