@@ -1,4 +1,4 @@
-- name: print the varibles
+- name: print the variables from external file
   hosts: local
   connection: local
   var_files:
