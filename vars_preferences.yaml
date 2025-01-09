@@ -3,8 +3,8 @@
   connection: local
   vars:
     GREET: "TASK-1"
-  vars_files:
-    - course.yaml
+  # vars_files:
+  #   - course.yaml
   # vars_prompt:
   #   - name: GREET
   #     prompt: Enter the value
@@ -16,3 +16,11 @@
     #   GREET: "TASK-2"
     ansible.builtin.debug:
       msg: "Hello from {{ GREET }}"
+
+# 1. command line or args
+# 2. under task
+# 3. files
+# 4. prompt
+# 5. vars
+# 6. inventory file
+# 7. roles
