@@ -1,0 +1,8 @@
+- name: print the varibles
+  hosts: local
+  become: yes
+  vars:
+  - course.yaml
+  tasks:
+  - name: print the course information
+    msg: "course is {{ COURSE }}, duration is {{ DURATION }}, trainer is {{ TRAINER }}"
