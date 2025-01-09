@@ -1,12 +1,12 @@
-- name: Installing NGINX
-  hosts: 172.31.91.79
+- name: NGINX Server
+  hosts: web
   become: yes
   tasks:
-  - name: install nginx
+  - name: Install NGINX
     ansible.builtin.package:
       name: nginx
       status: present
-  - name: starting nginx
+  - name: Enabling NGINX
     ansible.builtin.service:
       name: nginx
       status: started
