@@ -1,7 +1,7 @@
 - name: print the variables from external file
   hosts: local
   connection: local
-  var_files:
+  vars_files:
   - course.yaml
   tasks:
   - name: print the course information
