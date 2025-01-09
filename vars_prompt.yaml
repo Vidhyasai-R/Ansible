@@ -16,4 +16,4 @@
   tasks:
   - name: print the prompt variables
     ansible.builtin.debug:
-    msg: "Course is {{ COURSE }}, Duration is {{ DURATION }}, trainer is {{ TRAINER }}"
+      msg: "Course is {{ COURSE }}, Duration is {{ DURATION }}, trainer is {{ TRAINER }}"
