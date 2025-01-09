@@ -1,6 +1,6 @@
 - name: print the varibles
   hosts: local
-  become: yes
+  connection: local
   vars:
   - course.yaml
   tasks:
