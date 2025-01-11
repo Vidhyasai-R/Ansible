@@ -1,0 +1,31 @@
+- name: filters
+  hosts: local
+  become: yes
+  vars:
+   fruits: "Banana, Apple, Orange"
+  tasks:
+  - name: filter
+    ansible.builtin.debug:
+     msg: "{{ person | default('Ramesh') }}"
+
+  - name: convert string to list
+    ansible.builtin.debug:
+     msg: "Fruits are : {{ fruits | split(',') }}"
+
+  - name: convert map into list
+    vars:
+     course:
+      name: Ansible
+      duration: 10 Hrs
+      trainer: Shiva kumar
+    ansible.builtin.debug:
+     msg: "{{ course | dict2items }}"
+  
+  - name: convert list to map
+    vars:
+     course:
+     - { 'key':'name', 'value':'Ansible' }
+     - { 'key':'duration', 'value':'10 Hrs' }
+     - { 'key':'trainer', 'value':'Shiva kumar' }
+    ansible.builtin.debug:
+     msg: "{{ course | items2dict }}"
