@@ -1,0 +1,11 @@
+- name: print the loops
+  hosts: local
+  become: yes
+  tasks:
+  - name: install the packages
+    ansible.builtin.package:
+     name: "{{ item.name }}"
+     state: "{{ item.state }}"
+    loop:
+     - { name: 'git', state: 'present' }
+     - { name: 'gcc', state: 'present' }
