@@ -1,5 +1,5 @@
 - name: Installing NGINX Server
-  hosts: nginx
-  become: yes
+  hosts: local
+  connection: local
   roles:
   - nginx-server
